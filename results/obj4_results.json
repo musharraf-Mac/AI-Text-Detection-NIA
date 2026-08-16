@@ -1,0 +1,10 @@
+{
+    "dataset": "Qwen (unseen generator)",
+    "total_samples": 4334,
+    "ai_samples": 3000,
+    "human_samples": 1334,
+    "accuracy": 1.0,
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "true_human": 
