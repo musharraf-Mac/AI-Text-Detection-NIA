@@ -1,0 +1,6 @@
+Detector,Overall_Accuracy,Paraphrased_Accuracy,Non_Paraphrased_Accuracy,Accuracy_Drop
+My Model,12.00%,6.00%,16.50%,10.50%
+ChatGPT,45.14%,13.33%,69.00%,55.67%
+Gemini,40.57%,30.67%,48.00%,17.33%
+Claude,31.43%,26.67%,35.00%,8.33%
+zeroGPT,49.71%,38.67%,58.00%,19.33%
