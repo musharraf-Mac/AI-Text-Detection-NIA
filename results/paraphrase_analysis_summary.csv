@@ -1,5 +1,5 @@
 Detector,Paraphrased Accuracy,Non-Paraphrased Accuracy,Accuracy Drop,Paraphrased Count,Non-Paraphrased Count
-My Model,6.00%,16.50%,10.50%,150,200
+My Model,94.00%,83.50%,-10.50%,150,200
 ChatGPT,13.33%,69.00%,55.67%,150,200
 Gemini,30.67%,48.00%,17.33%,150,200
 Claude,26.67%,35.00%,8.33%,150,200
