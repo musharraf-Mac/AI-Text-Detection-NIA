@@ -6,15 +6,15 @@ saves the featured dataset, and produces distribution comparison
 plots (human vs ai) for every engineered feature.
 
 Run from the project root:
-    python src/build_featured_dataset.py
+    python src/build_featured_dataset_b.py
 
 Inputs:
-    data/processed/final_training_dataset.csv
+    data/processed/final_training_dataset_b.csv
         required columns: text, author, domain, gen_source,
                            source_dataset, split
 
 Outputs:
-    data/processed/featured_dataset.csv
+    data/processed/featured_dataset_b.csv
     outputs/figures/<feature>_hist.png   (histogram, human vs ai overlaid)
     outputs/figures/<feature>_box.png    (boxplot, human vs ai side by side)
     outputs/feature_summary_stats.csv    (mean/std/median per class per feature)
@@ -31,8 +31,8 @@ import matplotlib.pyplot as plt
 sys.path.insert(0, os.path.dirname(__file__))
 from features import extract_features, FEATURE_NAMES  # noqa: E402
 
-INPUT_PATH = "data/processed/final_training_dataset.csv"
-OUTPUT_CSV_PATH = "data/processed/featured_dataset.csv"
+INPUT_PATH = "data/processed/final_training_dataset_b.csv"
+OUTPUT_CSV_PATH = "data/processed/featured_dataset_b.csv"
 FIGURES_DIR = "outputs/figures"
 SUMMARY_STATS_PATH = "outputs/feature_summary_stats.csv"
 
