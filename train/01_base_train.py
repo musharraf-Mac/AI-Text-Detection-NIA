@@ -6,7 +6,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import pickle, os
 
-df = pd.read_csv("../data_p/processed/dataset_comb_train.csv")
+df = pd.read_csv(os.path.join("..", "data_p", "processed", "dataset_comb_train.csv"))
 
 train_df = df[df["split"] == "train"]
 test_df = df[df["split"] == "test"]
@@ -35,23 +35,23 @@ print(classification_report(y_test, y_pred))
 cm = confusion_matrix(y_test, y_pred, labels=["human", "ai"])
 sns.heatmap(cm, annot=True, fmt="d", xticklabels=["human","ai"], yticklabels=["human","ai"], cmap="Blues")
 plt.xlabel("Predicted"); plt.ylabel("True"); plt.title("Confusion Matrix")
-plt.savefig("results/figures/confusion_matrix.png")
+plt.savefig("../results/confusion_matrix.png")
 plt.show()
 
 test_df = test_df.copy()
 test_df["predicted"] = y_pred
 
-test_df.to_csv("results/test_predictions.csv", index=False)
+test_df.to_csv("../results/test_predictions.csv", index=False)
 print("Saved predictions for Objective 3 team")
 
-os.makedirs("models", exist_ok=True)
+os.makedirs("../models", exist_ok=True)
 
-pickle.dump(model, open("models/baseline_model.pkl", "wb"))
-pickle.dump(vectorizer, open("models/tfidf_vectorizer.pkl", "wb"))
+pickle.dump(model, open("../models/baseline_model.pkl", "wb"))
+pickle.dump(vectorizer, open("../models/tfidf_vectorizer.pkl", "wb"))
 
 print("Model and vectorizer saved")
 
-with open("results/metrics.md", "w") as f:
+with open("../results/metrics.md", "w") as f:
     f.write("# Baseline Model Results\n\n")
     f.write(f"Accuracy: {accuracy_score(y_test, y_pred):.4f}\n\n")
     f.write("```\n" + classification_report(y_test, y_pred) + "\n```\n")
