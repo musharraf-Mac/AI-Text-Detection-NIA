@@ -1,0 +1,19 @@
+============================================================
+OBJECTIVE 4 FINAL RESULTS
+============================================================
+
+Dataset: Qwen (unseen generator)
+Total Samples: 4334
+AI Samples: 3000
+Human Samples: 1334
+
+Accuracy: 1.0000 (100.00%)
+F1 Score: 1.0000
+Precision: 1.0000
+Recall: 1.0000
+
+Confusion Matrix:
+  True Human -> Predicted Human: 1334
+  True Human -> Predicted AI:    0
+  True AI -> Predicted Human:    0
+  True AI -> Predicted AI:       3000
