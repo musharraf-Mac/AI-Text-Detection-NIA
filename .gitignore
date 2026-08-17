@@ -1,3 +1,5 @@
 .env
 secrets
 data_p
+__pycache__
+venv
