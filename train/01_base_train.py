@@ -14,7 +14,6 @@ test_df = df[df["split"] == "test"]
 print("Train:", train_df.shape, "Test:", test_df.shape)
 train_df["author"].value_counts()
 
-from sklearn.feature_extraction.text import TfidfVectorizer
 
 vectorizer = TfidfVectorizer(max_features=5000, stop_words="english", ngram_range=(1,2))
 
